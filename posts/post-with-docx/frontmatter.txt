@@ -1,0 +1,6 @@
+---
+title: "Post With docx"
+author: "Harlow Malloc"
+date: "2022-08-27"
+categories: [newnes, code, analysis]
+---
