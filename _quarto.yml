@@ -1,20 +1,24 @@
 project:
   type: website
   pre-render: custom2qmd.py
+  # twitter-card: true
 
 website:
-  title: "qblog"
+  title: "Rahul Saraf"
+  site-url: 'https://qblog.zealmaker.com'
+  site-path: '/'
   navbar:
     right:
-      - about.qmd
+      - blog.qmd
       - icon: github
-        href: https://github.com/
+        href: https://github.com/Rahuketu86
       - icon: twitter
-        href: https://twitter.com
+        href: https://twitter.com/rahuketu86
+    
 format:
   html:
-    theme: cosmo
+    theme: yeti
     css: styles.css
-
+  
 execute:
   freeze: auto

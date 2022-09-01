@@ -8,5 +8,5 @@ freeze: auto
 title-block-banner: true
 
 comments:
-  utterances:
-    repo: quarto-dev/quarto-docs
+  giscus: 
+    repo: Rahuketu86/feedback

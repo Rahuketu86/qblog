@@ -1,14 +1,48 @@
 ---
-title: "qblog"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
-title-block-banner: true
+title: "Rahul Saraf"
+image: profile.jpg
+about:
+  id: hero-heading
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/rahuketu86
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/rahul-saraf-6a125718/
+    - icon: github
+      text: Github
+      href: https://github.com/Rahuketu86
 ---
 
+::: {#hero-heading}
+I am a Leader, an Innovator and Problem Solver with extensive experience in building Digital transformation, Operational Excellence and Data Science initiatives. I have been running cross-functional, diverse and distributed teams across the globe. I have lived in countries like in US, France, Norway, Oman and India. I have been fortunate to be part of building some industry leading state of art technologies in domain of reservoir simulation, production monitoring, fiber optics, digital oilfields and now predictive maintenance & data science. In my present work as Regional Data Science lead of Middle East, North Africa and Asia Pacific for Halliburton, I spend significant portion of my time mentoring organizations, coaching executives, and peers (\> 200) embarking in digital strategy, analytics and machine learning journey, in addition to looking after all the opportunity pipeline and project execution.
+:::
 
+|                                           |                                                                |                  |
+|-----------------------|--------------------------------|------------------|
+| **ISB, Indian School of Business, INDIA** | *MBA (Partial Scholarship)*                                    | Jan'21 -- Jun'22 |
+| **ENSPM-IFP, Paris, FRANCE**              | *MSc - Reservoir, Geoscience & Engineering (Full Scholarship)* | Aug'08 -- Dec'09 |
+| **IIT Kanpur, INDIA**                     | *BTech - Civil Engineering*                                    | Jul'04 -- May'08 |
+
+: **Education**
+
+|                                  |                                                                                          |              |
+|---------------------|---------------------------------|------------------|
+| **HALLIBURTON, Bangalore-India** | *Regional Data Science Lead - Middle East, North Africa, Asia Pacific*                   | 2019-Present |
+| **PDO/IPCOS, Muscat-Oman**       | *Digital Oilfield Consultant - Nibras, Realtime Operations*                              | 2015-2017    |
+| **AGR, Stavanger-Norway**        | *Senior Reservoir Engineer*                                                              | 2014-2015    |
+| **ZIEBEL, Stavanger-Norway**     | *Senior Engineer-Reservoir & Software*                                                   | 2012-2014    |
+| **SPTGROUP, Oslo-Norway**        | *Software Engineer- MEPO-Reservoir Development Group and JIPs (Joint Industry Projects)* | 2010-2012    |
+| **FOROIL, Paris-France**         | *Engineer-Petroleum Specialist*                                                          | 2010         |
+
+: **Experience**
+
+|                                                                                 |                           |                  |
+|----------------------|--------------------------------|------------------|
+| **TOTAL, Pau, FRANCE**                                                          | *Reservoir Engineer*      | Jul'09 -- Dec'09 |
+| **SUNY ESF-Environment, Science and Forestry College, Syracuse, New York, USA** | *Research Analyst*        | May'07 -- Jul'07 |
+| **IIT Kanpur-Resource, Planning and Generation Department, INDIA**              | *Developer-Alumni Portal* | May'06 -- Jul'06 |
+
+: **Internship**

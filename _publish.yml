@@ -1,0 +1,4 @@
+- source: project
+  netlify:
+    - id: 9de1c32c-4cca-4ea1-813b-3f94804ecdcf
+      url: 'https://qblog.zealmaker.com'

@@ -34,7 +34,7 @@ def docx2qmd():
             frontmatter = open("frontmatter.txt", 'rb').readlines()
             cmd = f"quarto pandoc --from docx --to gfm --output generated.md --columns 9999 --extract-media=. --standalone {standalone_fname}"
             out = subprocess.check_output(cmd, shell=True)
-
+            os.unlink("index.qmd")
             with open("index.qmd", "ab") as index_qmd, open("frontmatter.txt", "rb") as frontmatter, open("generated.md", "rb") as generated_md:
                 index_qmd.write(frontmatter.read())
                 index_qmd.write(b"\n")
