@@ -21,7 +21,7 @@ def filter_names(folder='posts', ext=".docx"):
 
 
 def checksum(fname):
-    pass
+    return hashlib.md5(open(fname,'rb').read()).hexdigest()
 
 
 def docx2qmd():
@@ -31,14 +31,26 @@ def docx2qmd():
         dirname = os.path.dirname(os.path.abspath(fname))
         with chdir(dirname):
             standalone_fname = os.path.basename(fname)
-            frontmatter = open("frontmatter.txt", 'rb').readlines()
+            chksum_fname = checksum(standalone_fname)
+            chksum_frontmatter = checksum("frontmatter.txt")
+            chksum = chksum_fname+chksum_frontmatter
+            if os.path.exists('.checksum'):
+                with open(".checksum", 'r') as old_chksum_fname: 
+                    if chksum == old_chksum_fname.read(): continue
+ 
             cmd = f"quarto pandoc --from docx --to gfm --output generated.md --columns 9999 --extract-media=. --standalone {standalone_fname}"
             out = subprocess.check_output(cmd, shell=True)
             os.unlink("index.qmd")
-            with open("index.qmd", "ab") as index_qmd, open("frontmatter.txt", "rb") as frontmatter, open("generated.md", "rb") as generated_md:
+            with open("index.qmd", "ab") as index_qmd, open("frontmatter.txt", "rb") as frontmatter, open("generated.md", "rb") as generated_md, open('.checksum', 'w') as chksum_out:
                 index_qmd.write(frontmatter.read())
                 index_qmd.write(b"\n")
                 index_qmd.write(generated_md.read())
+                chksum_fname = checksum(standalone_fname)
+                chksum_frontmatter = checksum("frontmatter.txt")
+                chksum = chksum_fname+chksum_frontmatter
+                chksum_out.write(chksum)
+
+            
             os.unlink("generated.md")
             converted_qmd.append(os.path.relpath(os.path.abspath("index.qmd"), curdir))
     return converted_qmd
