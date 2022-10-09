@@ -1,13 +1,10 @@
 project:
   type: website
   pre-render: custom2qmd.py
-  post-render: app2site.py
-  preview: 
+  # twitter-card: true
       host: '0.0.0.0'
       port: 3000
       browser: false
-  # twitter-card: true
-
 website:
   title: "Rahul Saraf"
   site-url: 'https://qblog.zealmaker.com'
@@ -15,7 +12,6 @@ website:
   navbar:
     right:
       - blog.qmd
-      - app.qmd
       - icon: github
         href: https://github.com/Rahuketu86
       - icon: twitter

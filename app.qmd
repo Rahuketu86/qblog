@@ -1,0 +1,14 @@
+---
+title: "App"
+listing:
+  contents: apps
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [title, description, categories, image]
+  feed: true
+page-layout: full
+title-block-banner: true
+---

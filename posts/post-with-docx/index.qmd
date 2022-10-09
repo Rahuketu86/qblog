@@ -2,7 +2,7 @@
 title: "Post With docx"
 author: "Harlow Malloc"
 date: "2022-08-27"
-categories: [newnes, code, analysis]
+categories: [newnes, code, analysis, word]
 ---
 When writing a blog post with Microsoft Word – the filename becomes the title. In this case the file name is “2020-01-01-Microsoft-Word-Example-Post.docx”.
 

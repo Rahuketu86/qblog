@@ -10,7 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v2 
+        uses: actions/checkout@v3
+
+      - name: Flutter ci and build setup
+        id: flutter-action
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+          cache-key: 'flutter-:os:-:channel:-:version:-:arch:-:hash:' # optional, change this to force refresh cache
+          cache-path: ${{ runner.tool_cache }}/flutter/':channel:-:version:-:arch:' # optional, change this to specify the cache path
+          architecture: x64 # optional, x64 or arm64
+      - run: |
+          echo cache-path=${{ steps.flutter-action.outputs.cache-path }}
+          echo cache-key=${{ steps.flutter-action.outputs.cache-key }}
+          echo channel=${{ steps.flutter-action.outputs.channel }}
+          echo version=${{ steps.flutter-action.outputs.version }}
+          echo architecture=${{ steps.flutter-action.outputs.architecture }}
+        shell: bash
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
