@@ -1,3 +1,0 @@
-- This is the homepage
-- It will become part of default export for the entire curation
-- Link of the same will appear on the top of notes
