@@ -1,0 +1,6 @@
+---
+title: "Notes"
+author: "Rahul Saraf"
+description: Logseq notes from my portfolio database
+---
+
